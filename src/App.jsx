@@ -4,7 +4,16 @@ import RecipeForm from "../components/RecipeForm";
 import Home from "../components/Home";
 
 function App() {
-  const [recipeList, setRecipeList] = useState([]);
+  const [recipeList, setRecipeList] = useState([
+    { menu: "Pancake", category: "Breakfast", description: "Pancake", save: false },
+    { menu: "Burger", category: "Lunch", description: "Burger", save: false },
+    { menu: "Pizza", category: "Dinner", description: "Pizza", save: false },
+    { menu: "Ice Cream", category: "Dessert", description: "Ice Cream", save: false },
+    { menu: "Cake", category: "Dessert", description: "Cake", save: false },
+    { menu: "Sandwich", category: "Lunch", description: "Sandwich", save: false },
+    { menu: "Steak", category: "Dinner", description: "Steak", save: false },
+    { menu: "Pasta", category: "Dinner", description: "Pasta", save: false },
+  ]);
   const [menu, setMenu] = useState('');
   const [category, setCategory] = useState('');
   const [description, setDescription] = useState('');

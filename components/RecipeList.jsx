@@ -24,7 +24,7 @@ navigate("/add", { state: { recipe } });
   };
 
   return (
-    <div className="grid grid-cols-6 my-3">
+    <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-4 lg:grid-cols-6 my-3">
       {recipeList.map((recipe, index) => (
         <RecipeItem
           key={index}

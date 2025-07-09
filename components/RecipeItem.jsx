@@ -1,7 +1,7 @@
-const RecipeItem = ({ recipe, onSave, onDelete,onEdit }) => {
+const RecipeItem = ({ recipe, onSave, onDelete, onEdit }) => {
   return (
-    <div className="i-card my-2">
-      <div className="img">
+    <div className="i-card my-2 p-3 rounded-2xl">
+      <div className="img rounded-xl">
         <div className="save" onClick={onSave}>
           <img
             width={30}
@@ -15,18 +15,18 @@ const RecipeItem = ({ recipe, onSave, onDelete,onEdit }) => {
         </div>
       </div>
 
-      <div className="text">
-        <p className="h3">{recipe.menu.toUpperCase()}</p>
-        <p className="p">{recipe.description}</p>
-        <div className="flex flex-row justify-between">
-          <div class="icon-box bg-blue-100">
-            <p class="span">{recipe.category}</p>
+      <div className="my-3">
+        <p className="h3 poppins-bold">{recipe.menu.toUpperCase()}</p>
+        <p className="p poppins-regular">{recipe.description}</p>
+        <div className="flex flex-row justify-between py-2">
+          <div class="icon-box bg-blue-100 rounded-2xl">
+            <p class="span poppins-bold">{recipe.category}</p>
           </div>
           <div className="flex flex-row gap-2">
-            <div class="icon-box bg-yellow-300" onClick={onEdit}>
+            <div class="icon-box bg-gray-200 rounded-full " onClick={onEdit}>
               <img width={20} src="./components/assets/edit.png" alt="" />
             </div>
-            <div class="icon-box bg-red-700" onClick={onDelete}>
+            <div class="icon-box bg-gray-200 rounded-full " onClick={onDelete}>
               <img width={20} src="./components/assets/delete.png" alt="" />
             </div>
           </div>
